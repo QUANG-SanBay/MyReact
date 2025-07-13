@@ -3,13 +3,13 @@ import './App.css';
 // import GreetingForm from './components/GreetingForm';
 // import UserList from './components/UserList'
 import Timer from './components/Timer'
-import FilterableUserList from './components/FilterableUserList'
+import TooltipButton from './components/TooltipButton'
 
 function App() {
   return (
     <div className="root">
       <Timer></Timer>
-    <FilterableUserList></FilterableUserList>
+      <TooltipButton></TooltipButton>
     </div>
   );
 }
