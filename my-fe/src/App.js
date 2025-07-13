@@ -3,13 +3,13 @@ import './App.css';
 // import GreetingForm from './components/GreetingForm';
 // import UserList from './components/UserList'
 import Timer from './components/Timer'
-import TooltipButton from './components/TooltipButton'
+import ParentCounter from './components/ParentCounter'
 
 function App() {
   return (
     <div className="root">
       <Timer></Timer>
-      <TooltipButton></TooltipButton>
+      <ParentCounter></ParentCounter>
     </div>
   );
 }
