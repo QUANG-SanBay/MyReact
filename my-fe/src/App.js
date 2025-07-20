@@ -2,14 +2,12 @@ import './App.css';
 // import Counter from './components/Counter';
 // import GreetingForm from './components/GreetingForm';
 // import UserList from './components/UserList'
-import Timer from './components/Timer'
-import ParentCounter from './components/ParentCounter'
+import TodoList from './components/TodoList'
 
 function App() {
   return (
     <div className="root">
-      <Timer></Timer>
-      <ParentCounter></ParentCounter>
+      <TodoList></TodoList>
     </div>
   );
 }
