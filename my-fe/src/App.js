@@ -2,13 +2,15 @@ import './App.css';
 // import Counter from './components/Counter';
 // import GreetingForm from './components/GreetingForm';
 // import UserList from './components/UserList'
-import TodoList from './components/TodoList'
-
+import CartProvider from './contexts/CartContext';
+import ShoppingCart from './components/ShoppingCart';
+import ProductList from './components/ProductList';
 function App() {
   return (
-    <div className="root">
-      <TodoList></TodoList>
-    </div>
+    <CartProvider>
+      <ProductList></ProductList>
+      <ShoppingCart></ShoppingCart>
+    </CartProvider>
   );
 }
 
