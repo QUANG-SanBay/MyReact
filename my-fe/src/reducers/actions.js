@@ -1,4 +1,4 @@
-import {ADD_ITEM, REMOVE_ITEM, CLEAR_ITEM} from './constants'
+import { ADD_ITEM, REMOVE_ITEM, CLEAR_ITEM, TOGGLE_THEME } from "./constants"
 export const addItem = (payload)=>{
     return {
         type: ADD_ITEM,
@@ -14,5 +14,10 @@ export const removeItem = (payload)=>{
 export const clearItem = ()=>{
     return {
         type: CLEAR_ITEM,
+    }
+}
+export const toggleTheme = ()=>{
+    return{
+        type: TOGGLE_THEME,
     }
 }

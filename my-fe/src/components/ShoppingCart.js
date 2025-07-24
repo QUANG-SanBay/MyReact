@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import  {CartContext}  from '../contexts/CartContext';
+import  {CartContext, ThemeContext}  from '../contexts/';
 // import { ADD_ITEM } from '../reducers/constants';
 import {addItem} from '../reducers/actions'
 
@@ -11,9 +11,10 @@ const products = [
 
 function ProductList() {
     const { dispatch } = useContext(CartContext);
-
+    const [themeState, themedispatch] = useContext(ThemeContext);
+    console.log(themeState)
     return (
-        <div>
+        <div style={themeState.styles}>
             <h2>Danh sách sản phẩm</h2>
             <ul>
                 {products.map(product => (
