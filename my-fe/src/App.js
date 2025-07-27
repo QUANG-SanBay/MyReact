@@ -1,25 +1,12 @@
 import './App.css';
-import Video from './components/Video'
-import { useRef, useEffect } from 'react';
-
+import Button from './components/Button';
 function App() {
-  const videoRef = useRef()
-  useEffect(()=>{
-    console.log(videoRef.current)
-  })
-  const handlePlay = ()=>{
-    videoRef.current.play()
-  }
-  const handlePause = ()=>{
-    videoRef.current.pause()
-  }
   return (
     <>
-      <Video ref={videoRef}></Video>
-      <button onClick={handlePlay}>play</button>
-      <button onClick={handlePause}>pause</button>
+      <Button>click me!!</Button>
+      <Button primary={true}>primary btn</Button>
+      <Button danger={true}>danger btn</Button>
     </>
-      
   )
 }
 

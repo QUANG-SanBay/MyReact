@@ -1,0 +1,28 @@
+$primary-color: #007bff;
+$danger-color: #dc3545;
+$default-border-color: #ccc;
+
+.btn {
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: $default-border-color;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #ababab
+  }
+}
+
+.primary {
+  background-color: #007bff;
+  color: white;
+  border-color: $primary-color;
+}
+
+.danger {
+  background-color: #dc3545;
+  color: white;
+  border-color: $danger-color;
+}
