@@ -1,22 +1,26 @@
 import './App.css';
-// import Counter from './components/Counter';
-// import GreetingForm from './components/GreetingForm';
-// import UserList from './components/UserList'
-import {CartProvider, ThemeProvider} from './contexts/';
-import ShoppingCart from './components/ShoppingCart';
-import ProductList from './components/ProductList';
-import ToggleTheme from './components/ToggleTheme';
-function App() {
-  return (
-    <CartProvider>
-      <ThemeProvider>
-        <ToggleTheme></ToggleTheme>
-        <ProductList></ProductList>
-        <ShoppingCart></ShoppingCart>
+import Video from './components/Video'
+import { useRef, useEffect } from 'react';
 
-      </ThemeProvider>
-    </CartProvider>
-  );
+function App() {
+  const videoRef = useRef()
+  useEffect(()=>{
+    console.log(videoRef.current)
+  })
+  const handlePlay = ()=>{
+    videoRef.current.play()
+  }
+  const handlePause = ()=>{
+    videoRef.current.pause()
+  }
+  return (
+    <>
+      <Video ref={videoRef}></Video>
+      <button onClick={handlePlay}>play</button>
+      <button onClick={handlePause}>pause</button>
+    </>
+      
+  )
 }
 
 export default App;
